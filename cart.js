@@ -1,306 +1,223 @@
-var cart = {
-  "items": [
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Product Lists</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="container">
+      <a class="link" href="../Project_Assignment_1/index.html">Home</a><br>
+      <section id="content"><!-- Defining the content section #2-->
+        <div id="left">
+          <h3>Product List</h3>
+          <ul>
+            <li class="product" id="1">
+              <div class="img">
+                <a href="#"><img alt=""
+                   src="https://images-na.ssl-images-amazon.com/images/I/51bOoGhwjML._SS100_.jpg"> </a>
+              </div>
+              <div class="info">
+                <h4 class="title">Helping Children Succeed: What Works and Why</h4>
+                  <p class="product-description">In How Children Succeed, Paul Tough introduced us to research showing that personal qualities like perseverance,
+                                                 self-control,  and conscientiousness play a critical role in children’s success.</p>
+                  <div class="price">
+                    <span class="st">Our Price:<strong>$12.99</strong></span>
+                  </div>
+                  <div class="add-to-cart">
+                    <button onclick="addItem(1)">Add to Cart</button>
+                  </div>
+              </div>  <!-- end info --> 
+            </li>
 
-  ],
-  "cart-total": 0,
-  "promos": {
-    	"LEGOCity": 0.9,
-    	"ASICS": 0.85,
-    	"WALNUT": 0.95
-    }
-};
+            <!--- Product 2 -->
+            <li class="product" id="2">
+              <div class="img"><a href="#"><img alt=""
+                   src="https://images-na.ssl-images-amazon.com/images/I/41qZO1eP%2BnL._SS100_.jpg" width="100"></a>
+              </div>
+              <div class="info">
+                <h4 class="title">Bona Pro Series Hardwood Floor Cleaner Refill</h4>
+                  <p class="product-description">Bona Pro Series Hardwood Floor Cleaner is a professional strength, non-toxic waterborne cleaner that is specially formulated
+                                                 for all types of hardwood floors finish.Does not do what promised</p>
+                  <div class="price">
+                    <span class="st">Our Price:<strong>$17.59</strong></span>
+                  </div>
+                  <div class="add-to-cart">
+                    <button onclick="addItem(2)">Add to Cart</button>
+                  </div>
+              </div> <!-- end info-->
+            </li>
+            <!--- Product 3 -->
+            <li class="product" id="3">
+              <div class="img"><a href="#"><img alt=""
+                   src=" https://images-na.ssl-images-amazon.com/images/I/41bbuOomZjL._SS100_.jpg"></a>
+              </div>
+              <div class="info">
+                <h4 class="title" href="#">Boots No7 Protect & Perfect Night Cream 50ml(1.6 fl oz.)</h4>
+                <p class="product-description">Helps improve the appearance of deep lines, wrinkles and firms the skin. Prevents against future signs of aging with SPF 15 
+                                               broad-spectrum protection. Smooths and softens fine lines. Leaves no residue.</p>
+                <div class="price">
+                  <span class="st">Price:<strong>$11.02</strong></span>
+                </div>
+                <div class="add-to-cart">
+                  <button onclick="addItem(3)">Add to Cart</button>
+                </div>
+              </div> <!-- end info-->
+            </li>
+            <!--- Product 4 -->
+            <li class="product" id="4">
+              <div class="img"><a href="#"><img alt=""
+                   src="https://images-na.ssl-images-amazon.com/images/I/51qn6tojARL._SL1000_.jpg"></a>
+              </div>
+              <div class="info">
+                <h4 class="title">Walnut Oil, 16 oz</h4>
+                <p class="product-description">100% pure walnut oil. Leaves a great satin finish on all hardwoods and exotic woods. No petroleum distillates. Completely safe 
+                                               for food contact after drying. Just wipe on or immerse to the floor sparingly and wait for beautiful results of your floor.</p>
+                <div class="price">
+                  <span class="st">Our price:<strong>$15.99</strong></span>
+                </div>
+                <div class="add-to-cart">
+                  <button onclick="addItem(4)">Add to Cart</button>     
+                </div>
+              </div> <!-- end in fo-->
+            </li>
+            <!-- Product 5 -->
+            <li class="product" id="5">
+              <div class="img"><a href="#"><img alt="LEGO City 7499 Flexible Tracks Set" src=""></a></div>
+              <div class="info">
+                <h4 class="title">LEGO City</h4>
+                <p class="product-description">7499 Flexible Tracks Set. Make your trains go even further. There's no obstacles to making your engine go around awkward shapes 
+                                               - or anywhere - with this set of 8 straight and 16 flexible tracks Therefore, add more to your track set and train construction with LEGO.</p>
+                <div class="price">
+                  <span class="st">Our price:<strong>$18.29</strong></span>
+                </div>
+                <div class="add-to-cart">
+                  <button onclick="addItem(5)">Add to Cart</button>
+                </div>
+              </div> <!-- end in fo-->
+            </li>
+            <!-- Product 6 -->
+            <li class="product" id="6">
+              <div class="img"><a href="#"><img alt="LEGO City Trains Train Station 60050 Building Toy" src=""></a>
+              </div>
+              <div class="info">
+                <h4 class="title">LEGO City</h4>
+                <p class="product-description">Train Station 60050 Building Toy. Includes 5 : conductor, chef, taxi driver and 2 travelers Accessories include a suitcase,
+                                               newspaper, sausage and a train conductor sign. Features a main entrance with stairs, train map. The mediium dificiulty to assemble.</p>
+                <div class="price">
+                  <span class="st">Our price:<strong>$151.99</strong></span>
+                </div>
+                <div class="add-to-cart">
+                  <button onclick="addItem(6)">Add to Cart</button>
+                </div>
+              </div> <!-- end in fo-->
+            </li>
+            <!-- Product 7 -->
+            <li class="product" id="7">
+              <div class="img"><a href="#"><img alt="ASICS Women's Gel-Nimbus 18 Running Shoe" src=""></a></div>
+              <div class="info">
+                <h4 class="title">ASICS</h4>
+                <p class="product-description">Women's Gel-Nimbus 18 Running Shoe. Synthetic Imported Rubber sole FluidFit. ASICS FluidFit upper technology combines
+                                               multi-directional stretch mesh with stretch reinforcements that adapt to the athlete's foot, creating a true customized fit.</p>
+                <div class="price">
+                  <span class="st">Our price:<strong>$150.00</strong></span>
+                </div>
+                <div class="add-to-cart">
+                  <button onclick="addItem(7)">Add to Cart</button>
+                </div>
+              </div><!-- end in fo-->
+            </li>
+            <!-- Product 8 -->
+            <li class="product" id="8">
+              <div class="img"><a href="#"><img alt="Make It Stick: The Science of Successful Learning" src=""></a>
+              </div>
+              <div class="info">
+                <h4 class="title">Make It Stick: The Science of Successful Learning</h4>
+                <p class="product-description">Good teaching, we believe, should be creatively tailored to the different learning styles of students and should use strategies
+                                               that make learning easier. This book helps to achieve it. </p>
+                <div class="price">
+                  <span class="st">Our price:<strong>$20.29</strong></span>
+                </div>
+                <div class="add-to-cart">
+                  <button onclick="addItem(8)">Add to Cart</button>
+                </div>
+              </div> <!-- end in fo-->
+            </li>
+            <!-- Product 9 -->
+            <li class="product" id="9">
+              <div class="img"><a href="#"><img alt=""
+                   src="https://images-na.ssl-images-amazon.com/images/I/61j-Fxa%2BkfL._SS500_PJStripe-Robin-Large,TopLeft,0,0_SS280.jpg"></a>
+              </div>
+              <div class="info">
+                <h4 class="title">"Songs of Summer"</h4>
+                <p class="product-description">Summer of '69 Secrets Gold In The Summertime (Acoustic) Sun King God only Knows Summertime Is In Our Hands (Acoustic). Listen 
+                                                and enjoy this beautiful music in any time with your friends and family or even coworkers in the evening or daytime.</p>
+                <div class="price">
+                  <span class="st">Our price:<strong>$2.99</strong></span>
+                </div>
+                <div class="add-to-cart">
+                  <button onclick="addItem(9)">Add to Cart</button>
+                </div>
+              </div> <!-- end in fo-->
+            </li>
+            <!-- Product 9 -->
+            <li class="product" id="10">
+              <div class="img"><a href="#"><img alt=""
+                   src="https://images-na.ssl-images-amazon.com/images/I/61yQ%2BKXCh3L._SL1000_.jpg"></a>
+              </div>
+              <div class="info">
+                <h4 class="title">Bounty Dash Button</h4>
+                <p class="product-description">Amazon Dash Button is a Wi-Fi connected device that reorders your
+                                               favorite product with the press of a button. Each Dash Button is paired with a product of your
+                                               choice, which is selected during the set-up process.It eases your life during order.</p>
+                <div class="price">
+                  <span class="st">Our price:<strong>$4.99.00</strong></span>
+                </div>
+                <div class="add-to-cart">
+                  <button onclick="addItem(10)">Add to Cart</button>
+                </div>
+              </div> <!-- end in fo-->
+            </li>
+          </ul>
+        </div> <!-- Left -->
+ <!--  </div>-->
+      </section> <!-- content -->
+    </div>  <!-- container -->
+      <!--- Shopping Cart -->
+      <div class="show-hide-button">
+        <button id="toggle" class="hide">Hide Shopping Cart</button>
+      </div>  
+      <section class="checkout" tabindex="-1" id="checkout">
+        <div class="title">
+          <h2>Shopping Cart</h2>
+        </div>
+        <h4 class="cartHead first">Item</h4>
+        <h4 class="cartHead second">Price</h4>
+        <h4 class="cartHead third">Qty</h4>
+        <h4 class="cartHead fourth">Total</h4>
+        <!--- Shopping Cart Items -->
+        <ul id="checkoutNameUl">
+        </ul>
+        <hr>
+<!--<div id="shopping-items">
+    </div>-->
+        <div class="buttons">
+         <label>Subtotal:</label>
+         <input type="text" id="subtotal" class="txtinput"
+                placeholder="0">
+         <input type="submit" value="Keep Shopping">
+           &nbsp; &nbsp;
+         <input type="text" class="txtinput" placeholder="Enter promo code" id="userPromo">
+         <input type="submit" class="promo" onclick="calculatePromo()" value="Apply Promo">
+           &nbsp; &nbsp;
+         <input type="submit" value="Checkout">
+       </div> <!-- buttons -->
+     </section> <!-- shopping cart -->
+   <script type="text/javascript" src="cart.js"></script>
+ </body>
 
-var utilities = {
-  find: function(list, id) {
-    return list.map(function(x) {
-        return x.id;
-      })
-      .indexOf(id);
-  },
-  findByProductName: function (list, name) {
-      var i = 0;
-      var found = false;
-      while (!found && i < list.length) {      
-         if (list[i].name === name) {
-            found = true;         
-         }
-         i++; 
-      }
-      if (found) {
-         return i - 1;
-      }
-      else {
-         return null;
-      }
-   },
-   cartTotalItems: function (list) {
-      var i = 0;
-      var num = 0;
 
-      while (i < list.length) {
-         num += list[i].count;
-         i++;
-      }
-      return num;
-   },
-}
-//var itemsInShoppingCart = document.getElementById("shopping-items");
-var itemsInCart = document.getElementById("shopping-items");
-console.log("shopping-items " + itemsInCart);
 
-// Toggle show/hide cart w/ button
 
-var shoppingCart = document.getElementById("shopping-cart");
-var toggleButton = document.getElementById("toggle");
-
-function showHide (element) {
-	if (element.classList.contains("hide")) {
-		toggleButton.textContent = "Hide Shopping Cart";
-	} else {
-		toggleButton.textContent = "Show Shopping Cart";
-	}
-	element.classList.toggle("hide");
-	element.focus();
-}
-
-// Global variables
-//var itemsInShoppingCart = document.getElementById("shopping-items");
-var subTotal = document.getElementById("subtotal");
-var shoppingItems = document.getElementById("shopping-items");
-//var productQuantity = 0;
-function addItem(id) {
-
-  //var shoppingItems = document.getElementById("shopping-items");
-
-  // Look up product details
-  var product = document.getElementById(id);
-  console.log("product " + product);
-  var productName = product.querySelector(".title").innerHTML;
-  console.log("productName " + productName);
-  var productDescription = product.querySelector(".product-description").innerHTML;
-  var shortProductDescription = productDescription.substr(0, productDescription.indexOf("."));
-  var productPic = product.querySelector(".img").src;
-  //console.log("productPic " + productPic);
-  var productPrice = parseFloat(product.querySelector(".st").innerHTML.replace(/[^\d|\.]/g, ""));
-  console.log("productPrice = " + productPrice); 
- // var productQuantity = parseInt(product.querySelector(".product-quantity").value) || 1;
-  //console.log("productQuantity = " + productQuantity);
-  // Check if items exists, if so increment count, else add to cart
-  var inputFieldId = cart.items.length;
-  console.log("cart.items.length = " + cart.items.length);
-  if (cart.items.length === 0 || indexInCartObject === -1) {
-    cart.items.push({
-      "id": id,
-      "featuredImage": productPic,
-      "name": productName,
-      "price": productPrice,
-      "totalPrice": productPrice,
-      "count": 1,
-      "inputId": inputFieldId
-    });
   
-    } else {
-      
-        cart.itemsCart[index].count += 1;
-        cart.itemsCart[index].totalPrice += productPrice;
-    }
-  
- console.log("before render cart on screen " + cart.items.length);
-  // Rerender cart on screen
-  //shoppingItems.innerHTML = JSON.stringify(cart, null, 2);
-  
-  console.log("items = " + itemsInCart.length);
-    // use a function from utilities object to update our cart number in fixed nav bar on each click
-
-  displayInCart();
-  calculateSubTotal();
-  //updateTotalPrice();
-}
-function calculateSubTotal(){
-  //Set cart-total back to 0 before calculating it
-  cart["cart-total"] = 0;
-  
-  //Loop over all product's prices and quantities and add products
-  //of them tothe cart subtotal
-  console.log("calculateSubtotal");
-  for (var i = 0; i < cart.items.length; i++){
-    cart["cart-total"] += cart.items[i].price * cart.items[i].count;
-  }
-  
-  //Set subtotal field to cart-total value
-  subTotal.value = "$" + cart["cart-total"];
-  console.log("subtotal = " + cart["cart-total"]);
-}
-function updateSubTotal(productName){
-  console.log("updateSubTotal " + productName + " " + cart.items.length);
-  for (var i = 0; i < cart.items.length; i++){
-    console.log("product name in loop " + cart.items[i].name);
-     if (cart.items[i].name === productName){
-       cart["cart-total"] -= cart.items[i].price * cart.items[i].count;
-     }
-  }
-  subTotal.value = "$" + cart["cart-total"];
-  console.log("subtotal = " + cart["cart-total"]);
-}
-
-
-function displayInCart() {
-
-   var itemsInCart = document.getElementById("checkoutNameUl");
-
-   itemsInCart.innerHTML = "";
-
-   for (var i = 0; i < cart.items.length; i++) {
-      if (i >= 1) {
-        
-         itemsInCart.innerHTML += "<hr id='line" + i + "'><br>"
-      }
-
-      itemsInCart.innerHTML +=
-          '<li class="checkoutContentsLi" id="product' + cart.items.length + '">' +
-          '<div class="cartInfo imageDiv">' +
-          '<img class="imageCart" src="' + cart.items[i].featuredImage + '">' +
-          '</div>' +
-          '<div class="cartInfo itemDiv">' +
-          '<p>' + cart.items[i].name + '</p>' +
-          '</div>' +
-          '<div class="cartInfo priceDiv">' +
-          '<p>' + '$ ' +
-          cart.items[i].price +
-          '</p>' +
-          '</div>' +
-          '<div class="cartInfo quantityDiv">' +
-          '<button class="button1" onclick="decrementValue(this)" value="-">-</button>' +
-          '<input id ="' + cart.items[i].inputId + '" readonly="readonly" class="quantityInput" type="text" min="0" max="10" value="' + cart.items[i].count + '">' +
-          '<button class="button2" onclick="incrementValue(this)" value="+">+</button>' +
-          '</div>' +
-          '<div class="cartInfo priceTotalDiv">' +
-          '<p>' +
-          '$' + cart.items[i].totalPrice +
-          '</p>' +
-          '</div>' +
-          '<div class="cartInfo removeDiv">' +
-          '<button class="removeItem" onclick="remove(this)">Remove</a>' +
-          '</div>' +
-          '<li>'
-
-   }
-
-
-// Activate removeItem() function if user click Remove button
-/*itemsInCart.addEventListener("click", function(el) {
-  
-  console.log("classList.item " + el.target.classList.item(0));
-	if(el.target.classList.contains("remove")) {
-		remove(el.target);
-	}
-  if(el.target.classList.contains("button1")) {
-		decrementValue(el.target);
-	}
-  if(el.target.classList.contains("button2")) {
-		incrementValue(el.target);
-  }  
-}, false);*/
-
-  // remove object when the button "remove" is pressed for that item
-function remove(ele) {
-console.log("remove");
-  console.log(ele);
-   var product = ele.parentNode.previousSibling.previousSibling.previousSibling;
-  console.log("parNode ="+ele.parentNode);
-  console.log("product = " + product);
-   var productName = product.previousSibling.firstChild.innerHTML;
-  console.log("product Name " + productName);
-  updateSubTotal(productName);
-  console.log("before findByProductName");
-  console.log("cart.items.length before findByName " + cart.items.length);
-  var cartObject = utilities.findByProductName(cart.items, productName);
-  console.log("cartObject = " + cartObject); 
-  
-   console.log("cart.items.length  before splice" + cart.items.length);
-  if (cartObject != null)
-   cart.items.splice(cartObject, 1);
-  
-  console.log("cart.items.length  after slice" + cart.items.length);
-
- //console.log("update " + utilities.cartTotalItems(cart.items));
-  console.log("before updateTotalPrice in remove"); 
-  //updateTotalPrice();
-  console.log("before displayInCart in remove"); 
-   displayInCart();
-}
-
-  // lowers the quantity of item by 1
-// will remove item from cart when trying to decrement past zero
-function decrementValue(ele) {
-  console.log("decrementValue");
-   var product = ele.parentNode.previousSibling.previousSibling;
-   console.log("product decr " + product);
-   var productName = product.firstChild.innerHTML;
-   console.log("productName decr " + productName);
-   var inputTag = ele.nextSibling;
-  console.log("input Tag decr" + inputTag);
-   var inputValue = Number(inputTag.value);
-  console.log("inputValue decr" +inputValue);
-   var cartIndex = utilities.findByProductName(cart.items, productName);
-console.log("cartIndex decr " + cartIndex);
-
-   if (cart.items[cartIndex].name === productName && inputValue > 1) {
-      cart.items[cartIndex].count -= 1;
-      cart.items[cartIndex].totalPrice -= cart.items[cartIndex].price;
-      inputValue = isNaN(inputValue) ? 0 : inputValue;
-      inputValue -= 1;
-      inputTag.setAttribute("value", inputValue);
-  
-      //updateTotalPrice();
-      displayInCart();
-   }
-   else {
-     console.log("else name==productName");
-      cart.items.splice(cartIndex, 1);
-
-     // updateTotalPrice();
-     console.log("Before displayInCart decr");
-      displayInCart();
-   }
-
-
-}
-  // increases the items in cart by one using the plus sign in shopping cart
-function incrementValue(ele) {
-  console.log("Increment");
-   var product = ele.parentNode.previousSibling.previousSibling;
-   var productName = product.firstChild.innerHTML;
-   var inputTag = ele.previousSibling;
-   var inputValue = Number(inputTag.value);
-   var cartIndex = utilities.findByProductName(cart.items, productName);
-   if (cart.items[cartIndex].name === productName && inputValue > 0) {
-     console.log("if incr");
-      cart.items[cartIndex].count += 1;
-      cart.items[cartIndex].totalPrice += cart.items[cartIndex].price;
-      inputValue = isNaN(inputValue) ? 0 : inputValue;
-      inputValue += 1;
-      inputTag.setAttribute("value", inputValue);
-
-     // updateTotalPrice();
-      displayInCart();
-   }
-
-}
-// function that updates the total price
-function updateTotalPrice() {
-   var totalPrice = document.getElementById("checkoutPrice");
-
-   var counterNum = 0;
-   var i = 0;
-   totalPrice.innerHTML = "";
-
-   while (i < cart.itemsCart.length) {
-      counterNum += cart.itemsCart[i].totalPrice;
-      i++;
-   }
-}
-
-
-}
 
