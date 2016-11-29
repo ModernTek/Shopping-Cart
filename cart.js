@@ -4,9 +4,9 @@ var cart = {
   ],
   "cart-total": 0,
   "promos": {
-    	"LEGO": 0.9,
-    	"ASICS": 0.85,
-    	"5ITEM": 0.95
+      "LEGO": 0.9,
+      "ASICS": 0.85,
+      "5ITEM": 0.95
     }
 };
 
@@ -78,9 +78,9 @@ toggleButton.addEventListener('click', function() {
 
 // Global variables
 var subTotal = document.getElementById("subtotal");
-//var shoppingItems = document.getElementById("shopping-items");
 
 function addItem(id) {
+  
   // Look up product details
   var product = document.getElementById(id);
    // added itemId
@@ -118,14 +118,12 @@ console.log(indexInCartObject);
   
  console.log("before render cart on screen " + cart.items.length);
   // Rerender cart on screen
-  //shoppingItems.innerHTML = JSON.stringify(cart, null, 2);
- // var checkout = document.querySelector(".checkout");
-  //checkout.style.display = "block";
   
   toggleButton.style.display = "block";
+  title
   console.log(cart.items);
-    // use a function from utilities object to update our cart number in fixed nav bar on each click
-
+    // use a function from utilities object to update our cart number on each click
+  
   displayInCart();
   calculateSubTotal();
   shoppingCart.focus();
@@ -147,8 +145,9 @@ function calculateSubTotal(){
   subTotal.value = "$" + cart["cart-total"];
   if (cart["cart-total"] === 0){
     //hide shopping cart
-    var checkout = document.querySelector(".checkout");
-  checkout.style.display = "none";
+   // var checkout = document.querySelector(".checkout");
+     //checkout.style.display = "none";
+     //toggleButton.style.display = "none";
   }
   console.log("subtotal = " + cart["cart-total"]);
 }
@@ -196,7 +195,7 @@ function displayInCart() {
    }
 }  // 
 
- // remove object when the button "remove" is pressed for that item
+  // remove object when the button "remove" is pressed for that item
 function remove(ele) {
 
    var product = ele.parentNode.previousSibling.previousSibling.previousSibling;
@@ -246,8 +245,7 @@ function remove(ele) {
 
       cart.items.splice(cartIndex, 1);
       calculateSubTotal();
-     var promo =
-         document.getElementById("userPromo").value;          promo.innerHTML =""; 
+      document.getElementById("userPromo").value=''; 
       displayInCart();
    }
 }
@@ -270,7 +268,8 @@ function remove(ele) {
 
       calculateSubTotal();
       var promo =
-         document.getElementById("userPromo").value;          promo.innerHTML ="";    
+        document.getElementById("userPromo").value;
+        promo.innerHTML ="";    
       displayInCart();
    }
 
@@ -291,35 +290,35 @@ function updateTotalPrice() {
 
 function calculatePromo() {
   console.log("calculate promo");
-	// Set subtotal back to initial value whenever there's no valid user promo in the input box
-	subTotal.value = "$" + cart["cart-total"];
+  // Set subtotal back to initial value whenever there's no valid user promo in the input box
+  subTotal.value = "$" + cart["cart-total"];
   console.log("Calculate promo start" + subTotal.value);
-	// Get promo code 
-	var userPromo = document.getElementById("userPromo").value;
+  // Get promo code 
+  var userPromo = document.getElementById("userPromo").value;
   console.log("User promo " + userPromo);
-	// Get index of product to check if the product on which an eventual 15MACPRO promo code is applied is valid
-	var indexLego = utilities.findByProductName(cart.items, "LEGO City");
+  // Get index of product to check if the product on which an eventual 15MACPRO promo code is applied is valid
+  var indexLego = utilities.findByProductName(cart.items, "LEGO City");
   var indexAsics = utilities.findByProductName(cart.items, "ASICS");
    console.log(indexLego + " index " + indexAsics);
-	// Loop through valid promo codes in cart object
-	for (var promo in cart.promos) {
+  // Loop through valid promo codes in cart object
+  for (var promo in cart.promos) {
     console.log("promo in the loop " + promo);
-		// if promo entered by user matches a valid promo, update the subtotal (an input field) with the new price
-		if (userPromo === promo) {
+    // if promo entered by user matches a valid promo, update the subtotal (an input field) with the new price
+    if (userPromo === promo) {
       console.log("userPromo == promo ");
-			// If Mac Pro is in basket and 15MACPRO promo code is used, discount 15% of Mac Pro price from total
-			if ((indexLego !== -1 && indexLego != null)  && cart.items[indexLego].name === "LEGO City" && userPromo === "LEGO" ) {
+      // If Mac Pro is in basket and 15MACPRO promo code is used, discount 15% of Mac Pro price from total
+      if ((indexLego !== -1 && indexLego != null)  && cart.items[indexLego].name === "LEGO City" && userPromo === "LEGO" ) {
         console.log("Promo lego");
-				subTotal.value = "$" + ((cart["cart-total"] - cart.items[indexLego].price + cart.items[indexLego].price) * cart.promos[promo]).toFixed(2);
-			} else if ((indexAsics !== -1 && indexAsics != null) && cart.items[indexAsics].name === "ASICS" && userPromo === "ASICS" ) {
+        subTotal.value = "$" + ((cart["cart-total"] - cart.items[indexLego].price + cart.items[indexLego].price) * cart.promos[promo]).toFixed(2);
+      } else if ((indexAsics !== -1 && indexAsics != null) && cart.items[indexAsics].name === "ASICS" && userPromo === "ASICS" ) {
         console.log("promo asics");
-				subTotal.value = "$" + ((cart["cart-total"] - cart.items[indexAsics].price + cart.items[indexAsics].price) * cart.promos[promo]).toFixed(2);
-			} else if (userPromo === "5ITEM"){
-				subTotal.value = "$" + (cart["cart-total"] * cart.promos[promo]).toFixed(2);
+        subTotal.value = "$" + ((cart["cart-total"] - cart.items[indexAsics].price + cart.items[indexAsics].price) * cart.promos[promo]).toFixed(2);
+      } else if (userPromo === "5ITEM"){
+        subTotal.value = "$" + (cart["cart-total"] * cart.promos[promo]).toFixed(2);
         console.log("calculate promo " + subTotal.value);
-			}
-		}
-	}
+      }
+    }
+  }
 }
 
 
