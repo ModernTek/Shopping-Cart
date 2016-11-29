@@ -237,13 +237,13 @@ input[type=submit]:active, input[type=button]:active {
   display    :block;
   top        : 838px;
   right      : 600px;
-	padding-top: 30px;
-	text-align : center;
+  padding-top: 30px;
+  text-align : center;
 }
 
 .show-hide-button button {
-	background-color: brown;
-	border          : 2px solid #423021;
+  background-color: brown;
+  border          : 2px solid #423021;
   background-color: #896640;
   border-radius   : 6px;
   text-shadow     : 2px 2px 0px #000;
@@ -254,6 +254,7 @@ input[type=submit]:active, input[type=button]:active {
   font-size       : 12px;
   cursor          : pointer;
   color           : white;
+  display         : inline-block;	
 }
 
  #checkoutNameUl {
