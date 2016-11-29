@@ -196,7 +196,7 @@ function displayInCart() {
    }
 }  // 
 
-  // remove object when the button "remove" is pressed for that item
+ // remove object when the button "remove" is pressed for that item
 function remove(ele) {
 
    var product = ele.parentNode.previousSibling.previousSibling.previousSibling;
@@ -210,10 +210,10 @@ function remove(ele) {
    if (cartObject != null)
      cart.items.splice(cartObject, 1);
      calculateSubTotal();
-     var promo =
-         document.getElementById("userPromo");
-         console.log("promo " + promo);
-         promo.innerHTML =""; 
+    // Empty text field promo if all items removed
+   if ( cart["cart-total"] === 0)
+         document.getElementById("userPromo").value='';
+        
      displayInCart();
 }
 
