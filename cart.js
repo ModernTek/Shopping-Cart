@@ -89,8 +89,9 @@ function addItem(id) {
   var productName = product.querySelector(".title").innerHTML;
   var productDescription = product.querySelector(".product-description").innerHTML;
   var shortProductDescription = productDescription.substr(0, productDescription.indexOf("."));
-  var productPic = document.querySelector(".prodImg").src;
-  
+  var productPic = product.querySelector(".prodImg").src;
+ 
+  console.log("Product Img  " + productPic);
    var indexInCartObject = utilities.find(cart.items, itemId);
 
   var productPrice = parseFloat(product.querySelector(".st").innerHTML.replace(/[^\d|\.]/g, ""));
@@ -245,7 +246,7 @@ function remove(ele) {
 
       cart.items.splice(cartIndex, 1);
       calculateSubTotal();
-      document.getElementById("userPromo").value=''; 
+     document.getElementById("userPromo").value=''; 
       displayInCart();
    }
 }
@@ -268,8 +269,8 @@ function remove(ele) {
 
       calculateSubTotal();
       var promo =
-        document.getElementById("userPromo").value;
-        promo.innerHTML ="";    
+         document.getElementById("userPromo").value;
+         promo.innerHTML ="";    
       displayInCart();
    }
 
