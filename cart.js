@@ -89,7 +89,7 @@ function addItem(id) {
   var productName = product.querySelector(".title").innerHTML;
   var productDescription = product.querySelector(".product-description").innerHTML;
   var shortProductDescription = productDescription.substr(0, productDescription.indexOf("."));
-  var productPic = product.querySelector(".img").src;
+  var productPic = document.querySelector(".prodImg").src;
   
    var indexInCartObject = utilities.find(cart.items, itemId);
 
